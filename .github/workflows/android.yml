@@ -25,5 +25,6 @@ jobs:
       - name: Show Project Files
         run: ls
 
-      - name: Give Execute Permission
+      - name: Give Permission
         run: chmod +x gradlew
+        
