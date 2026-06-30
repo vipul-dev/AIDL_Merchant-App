@@ -13,6 +13,8 @@ class PaymentServiceConnection(
         name: ComponentName?,
         service: IBinder?
     ) {
+
+        // check if service is null or connected
         Log.e("AIDL_TEST", "Service Connected")
 
         val payment = IPaymentService.Stub.asInterface(service)
