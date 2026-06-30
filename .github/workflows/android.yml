@@ -1,0 +1,32 @@
+name: Android CI
+
+on:
+  push:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Project
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Verify Java
+        run: java -version
+
+      - name: Show Project Files
+        run: |
+            pwd
+            ls -la
+
+      - name: Give Execute Permission
+        run: chmod +x gradlew
+        
