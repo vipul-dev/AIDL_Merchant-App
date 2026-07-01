@@ -14,7 +14,6 @@ class PaymentServiceConnection(
         service: IBinder?
     ) {
 
-
         Log.e("AIDL_TEST", "Service Connected")
 
         val payment = IPaymentService.Stub.asInterface(service)
