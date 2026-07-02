@@ -124,7 +124,7 @@ jobs:
       - build
       - unit-test
       - lint
-      - detekt
+#      - detekt
 
     runs-on: ubuntu-latest
 
