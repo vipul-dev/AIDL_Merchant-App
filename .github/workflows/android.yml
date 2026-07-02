@@ -156,6 +156,23 @@ jobs:
           path: app/build/reports/
 
 
+  deploy:
+    name: Deploy
+
+    needs:
+      - build
+      - unit-test
+      - lint
+      - detekt
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deployment Started
+        run: echo "Deploying Application..."
+
+
+
 #name: Android CI
 #
 #on:
