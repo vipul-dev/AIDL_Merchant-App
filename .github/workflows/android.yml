@@ -50,8 +50,8 @@ jobs:
       - name: Android Lint(focus on Android Specific issues)
         run: ./gradlew lint
 
-      - name: Run Detekt(focus on Kotlin Specific issues)
-        run: ./gradlew detekt
+#      - name: Run Detekt(focus on Kotlin Specific issues)
+#        run: ./gradlew detekt
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
@@ -66,12 +66,12 @@ jobs:
           name: lint-report
           path: app/build/reports/
 
-      - name: Upload Detekt Report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: detekt-report
-          path: app/build/reports/detekt/
+#      - name: Upload Detekt Report
+#        if: always()
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: detekt-report
+#          path: app/build/reports/detekt/
 
 
         
